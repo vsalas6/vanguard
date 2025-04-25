@@ -388,6 +388,49 @@ h2, h3{
     animation: stepUp 1s ease-in-out forwards;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    margin-bottom: 15px;
+}
+
+input{
+    height: 40px;
+    border-color: var(--blue);
+}
+
+label{
+    padding-bottom: 5px;
+}
+
+textarea{
+    height: 100px;
+    border-color: var(--blue);
+    margin-bottom: 30px;
+}
+
+button{
+    background-color: var(--blue);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+}
+
+footer a{
+    padding-left: 5px;
+    color: var(--blue);
+}
+
 
 /* MEDIA QUERIES (MEDIUM) */ 
 /* Don't delete */
