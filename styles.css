@@ -256,10 +256,6 @@ table{
     line-height: 1.5;
 }
 
-
-
-/* TEST */
-/* Hamburger menu icon */
 .menu-icon {
     font-size: 3rem;
     color: var(--white);
@@ -270,12 +266,10 @@ table{
     justify-content: flex-end;
 }
 
-/* Hide checkbox */
 #menu-toggle {
     display: none;
 }
 
-/* Hide menu by default on mobile */
 .menu {
     display: none;
     flex-direction: column;
@@ -287,31 +281,20 @@ table{
     text-align: center;
 }
 
-/* Show menu when checked */
 #menu-toggle:checked + .menu-icon + .menu {
     display: flex;
 }
 
-/* List item styles */
 .menu li {
     padding: 1rem;
     color: var(--blue);
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect */
 .menu li:hover {
     background-color: var(--blue);
     color: var(--black);
 }
-
-
-
-
-
-
-
-
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
 /* Don't delete */
@@ -379,11 +362,6 @@ header .container {
     }
 }
 
-
-
-
-
-
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -400,25 +378,9 @@ h2, h3{
     animation: fadeInDown 1s ease-out forwards;
 }
 
-/* .innovation-investment h2 {
-    animation-delay: 0.2s;
-}
-
-.innovation-investment p {
-    animation-delay: 0.4s;
-} */
-
 .innovation-investment a {
     animation-delay: 0.6s;
 } 
-
-
-
-
-
-
-
-
 
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 /* Don't delete */
