@@ -93,7 +93,6 @@ h1, h2, nav, .innovation-investment a{
 }
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
-/* Don't delete */
 .container {
     width: 90%;
     max-width: 1200px;
@@ -104,6 +103,10 @@ h1{
     font-size: 35px;
     padding-left: 50px;
     
+}
+
+header h2{
+    color: var(--black);
 }
 
 h2{
@@ -117,7 +120,6 @@ p{
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
-/* Don't delete */
  .innovation-investment{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
@@ -141,7 +143,7 @@ p{
     margin: auto;
 }
 
-.innovation-investment a{
+.innovation-investment a, button{
     color: var(--white);
     text-decoration: none;
     background-color: var(--blue);
@@ -150,7 +152,7 @@ p{
     transition: background-color 0.5s ease;    
 }
 
-.innovation-investment a:hover{
+.innovation-investment a:hover, button:hover{
     background-color: var(--red);
 }
 
@@ -188,6 +190,13 @@ p{
 #results{
     background-color: var(--blue);
     color: var(--white);
+    padding-bottom: 20px;
+}
+
+#results h2, #results p{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #results h2{
@@ -204,6 +213,7 @@ p{
     background-color: var(--blue);
     color: var(--white);
     padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .growth h3{
@@ -297,7 +307,6 @@ table{
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
-/* Don't delete */
  h1::before{
     content: "";
     position: absolute;
@@ -316,8 +325,10 @@ header .container {
     justify-content: space-between;
 }
 
+#results h2{
+    margin-left: 40px;
+}
 /* THIS ONE IS DONE FOR YOU */
-/* Don't delete */
 #bar-chart {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -331,7 +342,6 @@ header .container {
     position: relative;
 }
 /* ADD ON TRANSITION ON HEIGHT */
-/* Don't delete */
 .bar {
     width: 50px;
     background: var(--charcoal);
@@ -342,7 +352,6 @@ header .container {
 }
 
 /* THIS ONE IS DONE FOR YOU */
-/* Don't delete */
 .bar::after {
     content: attr(data-year);
     position: absolute;
@@ -372,7 +381,6 @@ header .container {
         transform: translateY(0);
     }
 }
-
 h2, h3{
     opacity: 0;
     animation: fadeInDown 1s ease-out forwards;
@@ -383,10 +391,18 @@ h2, h3{
 } 
 
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
-/* Don't delete */
 .bar {
     animation: stepUp 1s ease-in-out forwards;
 }
+
+#contact p{
+    padding-bottom: 20px;
+}
+
+#contact form {
+    display: grid;
+    gap: 1rem;
+  }
 
 form{
     display: flex;
@@ -399,26 +415,23 @@ input, textarea{
 
 input{
     height: 40px;
-    border-color: var(--blue);
+    border: 3px solid var(--blue);
 }
 
-label{
-    padding-bottom: 5px;
-}
 
 textarea{
     height: 100px;
-    border-color: var(--blue);
     margin-bottom: 30px;
+    border: 3px solid var(--blue);
 }
 
 button{
     background-color: var(--blue);
     padding: 15px;
     border-radius: 10px;
-    color: var(--white);
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 
 footer p{
@@ -431,10 +444,34 @@ footer a{
     color: var(--blue);
 }
 
+footer{
+    padding-bottom: 30px;
+}
 
 /* MEDIA QUERIES (MEDIUM) */ 
-/* Don't delete */
 @media (min-width: 800px){
+    .menu-icon {
+        display: none;
+    }
+    header nav {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .menu {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        gap: 2rem;
+        background-color: transparent;
+    }
+
+    .menu li {
+        padding: 15px;
+        color: var(--blue);
+        cursor: pointer;
+    }
     #results {
         grid-template-columns: 1fr 1fr;
     }
@@ -448,10 +485,136 @@ footer a{
     .bar-chart {
         width: 50%;
     }
+
+    #offer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #offer .container{
+        margin-bottom: -15px;
+    }
+
+    #offer{
+        margin-bottom: 100px;
+    }
+
+    #offer h2{
+        grid-column: 1 / -1;
+    }
+
+    #offer .container:nth-child(2) { 
+        order: 1;
+    }
+    #offer .container:nth-child(3) { 
+        order: 4; 
+    }
+    #offer .container:nth-child(4) { 
+        order: 2; 
+    }
+    #offer .container:nth-child(5) { 
+        order: 5; 
+    }
+    #offer .container:nth-child(6) { 
+        order: 3; 
+    }
+    #offer .container:nth-child(7) { 
+        order: 6; 
+    }
+
+/* Layout for the results section */
+    #results .container{
+        display: flex;
+    }
+
+    table{
+        margin-top: 80px;
+        margin-left: -100px;
+    }
+    
+    #bar-chart{
+        margin-top: 80px;
+        margin-left: -130px;
+    }
 }
 
 /* MEDIA QUERIES (LARGE) */
-/* Don't delete */
 @media (min-width: 1024px){
+    #offer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 
+    #offer h2 {
+        grid-column: 1 / -1;
+    }
+
+    #offer .container {
+        padding-right: 10px;
+    }
+
+    #offer .container:nth-child(2) { order: 1; } 
+    #offer .container:nth-child(3) { order: 2; } 
+    #offer .container:nth-child(4) { order: 3; }
+    #offer .container:nth-child(5) { order: 4; }
+    #offer .container:nth-child(6) { order: 5; } 
+    #offer .container:nth-child(7) { order: 6; }
+
+    #contact{
+        padding-bottom: 30px;
+    }
+
+    #contact form {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+      }
+    
+      #contact form label,
+      #contact form input,
+      #contact form textarea,
+      #contact form button {
+        width: 100%;
+      }
+
+      #full-name, #company-name, #email, #industry{
+        margin-bottom: -35px;
+      }
+    
+      #full-name,
+      label[for="full-name"],
+      #company-name,
+      label[for="company-name"],
+      #help,
+      label[for="help"] {
+        grid-column: 1;
+      }
+    
+      #email,
+      label[for="email"],
+      #industry,
+      label[for="industry"],
+      #my-submit,
+      label[for="industry"] {
+        grid-column: 2;
+      }
+
+      #email,
+      label[for="email"], #industry,
+      label[for="industry"]{
+        margin-top: -30px;
+      }
+
+      label[for="company-name"], label[for="industry"], label[for="help"]{
+        padding-top: 10px;
+      }
+
+      label[for="industry"]{
+        margin-top: -40px;
+      }
+
+      #my-submit{
+        height: 60px;
+      }
 }
